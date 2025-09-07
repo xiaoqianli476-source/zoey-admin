@@ -1,14 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+// 获取路由实例
+const router = useRouter()
+// 定义登录函数
+const login = () => {
+  router.push('/login') // 跳转到 login 页面（确保路由中配置了 /login）
+}
+
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-   启动了
-  </p>
-  <div class="p-4">左边距</div>
-   <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-    点击按钮
-  </button>
+    <router-view />
 </template>
 
-<style scoped></style>
+<style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+</style>
